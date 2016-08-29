@@ -1,0 +1,9 @@
+map MAP01 lookup "MAP01"
+{
+   levelnum = 1
+   next = "MAP02"
+   sky1 = "SKY1", 0
+   Music = "GROOVE"
+   par = 30
+   NoJump
+}

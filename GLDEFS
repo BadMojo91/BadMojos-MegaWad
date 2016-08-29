@@ -1,0 +1,10 @@
+Object LASER
+{
+ Frame LSERA { Light GatLight }
+}
+
+Pointlight GatLight
+{
+ Color 1.0 0.0 0.0
+ Size 90
+}
