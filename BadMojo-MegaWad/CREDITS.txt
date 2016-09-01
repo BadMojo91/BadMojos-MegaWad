@@ -1,0 +1,33 @@
+Textures: BadMojo, 3dRealms(Duke3d)
+Sprites: BadMojo
+Sounds: BadMojo
+Music: BadMojo
+
+*<.>*<.>*<.>*<.>*<.>*<.>*<.>*<.>*<.>*<.>*<.>*<.>
+*<.>*<.>Resources used from Realm667*<.>*<.>*<.>
+*<.>*<.>*<.>*<.>*<.>*<.>*<.>*<.>*<.>*<.>*<.>*<.>
+
+====================================
+Garden.wad:
+====================================
+Submitted: Yuyu3
+Decorate: Yuyu3
+Sprites: Rogue Entertainment, Raven Software
+Sprite Edit: Yuyu3
+
+====================================
+Lamps.wad:
+====================================
+Submitted: Captain Toenail
+Decorate: Captain Toenail
+GLDefs: Captain Toenail
+Sprites: Doom, Strife
+SpriteEdit: Captain Toenail
+
+====================================
+Ceiling Lamp:
+====================================
+Submitted: Captain Awesome
+Decorate: Captain Awesome
+Sprites: 3D Realms
+Sprite Edit: Captain Awesome

@@ -1,0 +1,4 @@
+:Door1
+	door	0
+	playuntildone	techdooropen
+end

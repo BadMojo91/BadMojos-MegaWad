@@ -1,0 +1,6 @@
+#include "Actors/gatlaser.dat"
+#include "Actors/autoshot.dat"
+#include "Actors/duallaser.dat"
+
+#include "Actors/lamps.dat"
+#include "Actors/garden.dat"

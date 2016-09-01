@@ -1,0 +1,87 @@
+ACTOR GatLaser : Weapon 6570
+{
+	Weapon.AmmoUse 1
+	Weapon.SlotNumber 4
+	Weapon.AmmoGive 60
+	Weapon.AmmoType "Cell"
+	Inventory.PickupMessage "You picked up a Gatling Laser"
+	
+	States
+	{
+	Ready:
+		GATL A 1 A_WeaponReady
+		Loop
+	Deselect:
+		GATL A 1 A_Lower
+		GATL A 0 A_StopSound(5)
+		Loop
+	Select:
+		GATL A 1 A_Raise
+		Loop
+	Fire:
+		GATL C 0 A_PlaySound("gatcharge", CHAN_WEAPON)
+		GATL CDEFGHI 3
+		GATL I 0 A_PlaySound("midfire", 5, 1, TRUE)
+	Hold:
+		GATL B 0 A_PlaySound("gatling", CHAN_WEAPON)
+		GATL B 0 A_GunFlash 
+		GATL J 0 A_FireCustomMissile ("Laser",random(3,-3),1,0,0,0,random(3,-3))
+		GATL J 1 Offset (0, 36)
+		GATL J 0 A_SetPitch (pitch-0.15)
+		GATL I 0 A_SetPitch (pitch+0.15)
+		GATL I 1 Offset (0, 33)
+		GATL I 0 A_ReFire("Fired")
+		GATL B 0 A_StopSound(5)
+		GATL B 0 A_PlaySound("endfire", 5)
+		GATL IHGFEDCA 3  
+		Goto Ready
+		
+	Fired:
+		GATL B 0 A_PlaySound("gatling", 6)
+		GATL B 0 A_GunFlash 
+		GATL J 0 A_FireCustomMissile ("Laser",random(5,-5),1,0,0,0,random(5,-5))
+		GATL J 1 Offset (0, 36)
+		GATL J 0 A_SetPitch (pitch-0.15)
+		GATL I 0 A_SetPitch (pitch+0.15)
+		GATL I 1 Offset (0, 33)
+		GATL I 0 A_ReFire("Hold")
+		GATL B 0 A_StopSound(5)
+		GATL B 0 A_PlaySound("endfire", 5)
+		GATL IHGFEDCA 3  
+		Goto Ready
+
+	Flash:
+		GATT A 0 A_Jump (127, 2)
+		GATT A 1 Bright A_Light1
+		goto lightdone
+		GATT B 1 Bright A_Light1
+		goto lightdone
+	Spawn:
+		GATS A -1
+		Stop
+	}
+}
+
+ACTOR Laser
+{
+	Radius 13
+	Height 8
+	Speed 100
+	Damage (5*random(1,5))
+	Projectile
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 0.75
+	DeathSound "weapons/plasmax"
+	Obituary "$OB_MPPLASMARIFLE"
+	Decal "GatDecal"
+	States
+	{
+	Spawn:
+		LSER A 1 Bright
+		Loop
+	Death:
+		LAZR ABCDE 4 Bright
+		Stop
+	}
+}
