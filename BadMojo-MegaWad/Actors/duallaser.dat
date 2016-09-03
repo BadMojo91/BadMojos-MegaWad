@@ -4,7 +4,7 @@ Actor DualLaser : Weapon 5666
 	Weapon.SlotNumber 4
 	Weapon.AmmoGive 60
 	Weapon.AmmoType "Cell"
-	Inventory.PickupMessage "You picked up the Dual Laser Rifle"
+	Inventory.PickupMessage "You picked up the Dual Laser"
 	
 	States
 	{
@@ -18,15 +18,17 @@ Actor DualLaser : Weapon 5666
 		DUAL A 1 A_Raise
 		Loop
 	Fire:
-		DUAL A 0 A_FireCustomMissile ("D_Laser",0.5,1,4,0,0,0)
-		DUAL A 0 Offset(0,39)A_FireCustomMissile("D_Laser",-0.5,1,-4,0,0,0)
+		DUAL A 0 A_FireCustomMissile ("D_Laser",0,1,4,0,0,0)
+		DUAL A 0 A_FireCustomMissile ("D_Laser",0,1,-4,0,0,0)
 		DUAL A 1 A_GunFlash
-		DUAL A 0 A_PlaySound ("FIRELASERS", CHAN_WEAPON)
-		DUAL AB 1
-		DUAL CBA 5
+		DUAL A 0 A_Recoil(3)
+		DUAL AB 2 A_PlaySound ("FIRELASERS", CHAN_WEAPON)
+		DUAL CD 1 A_SetPitch (Pitch-0.50)
+		DUAL DC 1  A_SetPitch (Pitch+0.50) 
+		DUAL BA 6
 		goto ready
 	Flash:
-		DUAL DE 1 Bright A_Light1
+		DUAL EF 1 Bright A_Light1
 		goto lightdone
 	Spawn:
 		DUSP A -1
@@ -35,12 +37,12 @@ Actor DualLaser : Weapon 5666
 	}
 }
 
-ACTOR D_Laser
+ACTOR D_Laser : FastProjectile
 {
 	Radius 13
 	Height 8
 	Speed 180
-	Damage (5*random(4,8))
+	Damage (8*random(8,12))
 	Projectile
 	+RANDOMIZE
 	RenderStyle Add
