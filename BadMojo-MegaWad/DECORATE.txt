@@ -1,6 +1,7 @@
-#include "Actors/gatlaser.dat"
-#include "Actors/autoshot.dat"
-#include "Actors/duallaser.dat"
+#include "Actors/gatlaser.txt"
+#include "Actors/autoshot.txt"
+#include "Actors/duallaser.txt"
 
-#include "Actors/lamps.dat"
-#include "Actors/garden.dat"
+#include "Actors/lamps.txt"
+#include "Actors/garden.txt"
+#include "Actors/balls.txt"
