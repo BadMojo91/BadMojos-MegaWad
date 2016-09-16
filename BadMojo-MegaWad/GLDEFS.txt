@@ -1,12 +1,15 @@
-Object LASER
-{
- Frame LSERA { Light GatLight }
-}
+// Dual Laser
+
 Object D_Laser
 {
- Frame LSERA { Light GatLight }
+ Frame LSERA { Light LaserLight }
+ Frame LAZRA { Light LaserLight2 }
+ Frame LAZRB { Light LaserLight3 }
+ Frame LAZRC { Light LaserLight3 }
+ Frame LAZRD { Light LaserLight4 }
 }
 
+// Gatling Laser
 
 Pointlight GatLight
 {
@@ -14,3 +17,89 @@ Pointlight GatLight
  Size 90
 }
 
+// Gatling Laser
+
+Object Laser
+{
+ Frame LSERA { Light LaserLight }
+ Frame LAZRA { Light LaserLight2 }
+ Frame LAZRB { Light LaserLight3 }
+ Frame LAZRC { Light LaserLight3 }
+ Frame LAZRD { Light LaserLight4 }
+}
+
+//Laser Projectile
+
+Pointlight LaserLight
+{
+ Color 1.0 0.0 0.0
+ Size 90
+}
+Pointlight LaserLight2
+{
+ Color 1.0 0.0 0.0
+ Size 110
+}
+
+Pointlight LaserLight3
+{
+ Color 1.0 0.0 0.0
+ Size 60
+}
+
+Pointlight LaserLight4
+{
+ Color 1.0 0.0 0.0
+ Size 30
+}
+
+// Plasma Repeater
+
+Object PulseBall
+{
+ Frame PLAZA0 { Light PulsLight0 }
+ Frame PLAZB0 { Light PulsLight0 }
+ Frame PLAZC0 { Light PulsLight0 }
+ Frame PULZA0 { Light PulsLight }
+ Frame PULZB0 { Light PulsLight }
+ Frame PULZC0 { Light PulsLight1 }
+ Frame PULZD0 { Light PulsLight1 }
+ Frame PULZE0 { Light PulsLight2 }
+ Frame PULZF0 { Light PulsLight2 }
+ Frame PULZG0 { Light PulsLight3 }
+ Frame PULZH0 { Light PulsLight3 }
+ Frame PULZI0 { Light PulsLight3 }
+ Frame PULZJ0 { Light PulsLight4 } 
+ Frame PULZK0 { Light PulsLight4 }
+}
+
+Pointlight PulsLight0
+{
+ Color 0.0 0.0 1.0
+ Size 150
+}
+Pointlight PulsLight
+{
+ Color 0.0 0.0 1.0
+ Size 130
+}
+Pointlight PulsLight1
+{
+ Color 0.0 0.0 1.0
+ Size 70
+}
+Pointlight PulsLight2
+{
+ Color 0.0 0.0 1.0
+ Size 50
+}
+Pointlight PulsLight3
+{
+ Color 0.0 0.0 1.0
+ Size 30
+}
+Pointlight PulsLight4
+{
+ Color 0.0 0.0 1.0
+ Size 15
+}

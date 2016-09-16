@@ -1,3 +1,5 @@
+// Lasers
+
 fader GatFade
 {
 		DecayStart 2
@@ -54,5 +56,20 @@ decal GatLower
        GatDecal1        1
        GatDecal2        1
    }
-   generator Laser       GatDecal
-   generator D_Laser       GatDecal
+   generator Laser       	GatDecal
+   generator D_Laser      	GatDecal
+   
+   // Plasma Repeater
+   
+   decal Scorch
+{
+	pic PLASMA2
+	shade "00 00 00"
+	x-scale 1
+	y-scale 1
+	randomflipx
+	randomflipy
+}
+
+
+generator PulseBall        Scorch

@@ -1,17 +1,22 @@
+$limit weapons/plasmax 0
+
 //Gatling Laser
-gatling GATLASR
-gatcharge GATCHRG
-midfire	GATMIDL
-endfire GATLEND
+gatling 			GATLASR
+gatcharge 			GATCHRG
+midfire				GATMIDL
+endfire 			GATLEND
 
 //Auto Shotgun
-autoshotty ATSHOTGN
-dropmag		DROPMAG	
-reload	RELODMAG
+autoshotty 			ATSHOTGN
+dropmag				DROPMAG	
+reload				RELODMAG
 
 //Dual Laser Rifle
-FIRELASERS LSRFIRE
+FIRELASERS 			LSRFIRE
+
+//Plasma Repeater
+pulsefire 			PULSE
 
 
 //Doors
-techdooropen SPACEDR
+techdooropen 		SPACEDR
