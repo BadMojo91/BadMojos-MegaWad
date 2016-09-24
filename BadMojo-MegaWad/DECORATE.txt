@@ -7,3 +7,4 @@
 #include "Actors/garden.txt"
 #include "Actors/balls.txt"
 #include "Actors/candle.txt"
+#include "Actors/deadstuff.txt"
