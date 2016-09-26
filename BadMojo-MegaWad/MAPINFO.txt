@@ -1,9 +1,21 @@
-map MAP01 lookup "MAP01"
+map MAP01 "The Beginning Of The End"
 {
-   levelnum = 1
-   next = "MAP02"
-   sky1 = "PSKY", 0
-   Music = "GROOVE"
-   par = 30
-   NoJump
+	levelnum = 1
+	next = "MAP02"
+	sky1 = "PSKY", 0
+	Music = "GROOVE"
+	par = 30
+	NoJump
 }
+
+map MAP02 "Escape"
+{
+	levelnum = 1
+	next = "MAP03"
+	sky1 = "PSKY", 0
+	Music = "OXYGEN"
+	par = 30
+	NoJump
+}
+
+
