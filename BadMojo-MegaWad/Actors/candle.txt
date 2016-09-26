@@ -1,0 +1,11 @@
+Actor BM_Candle 3608
+{
+  Radius 5
+  Height 10
+  States
+  {
+  Spawn:
+    CNDL A -1
+    Stop
+  }
+}

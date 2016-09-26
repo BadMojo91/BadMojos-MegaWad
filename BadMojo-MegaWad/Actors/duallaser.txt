@@ -1,0 +1,99 @@
+Actor DualLaser : Weapon 5666
+{
+	Weapon.AmmoUse 1
+	Weapon.SlotNumber 4
+	Weapon.AmmoGive 60
+	Weapon.AmmoType "Cell"
+	Inventory.PickupMessage "You got the Dual Laser!"
+
+	States
+	{
+	Ready:
+		DUAL A 1  A_WeaponReady
+		Loop
+	Deselect:
+		DUAL A 1  A_Lower
+		Loop
+	Select:
+		DUAL A 1  A_Raise
+		Loop
+	Fire:
+		DUAL A 0  A_FireCustomMissile ("D_Laser",0,1,4,0,0,0)
+		DUAL A 0  A_FireCustomMissile ("D_Laser",0,1,-4,0,0,0)
+		DUAL A 1  A_GunFlash
+		DUAL A 0  A_Recoil(5)
+		DUAL A 0  A_PlaySound ("FIRELASERS", CHAN_WEAPON)
+		DUAL AB 2 
+		DUAL CD 1 A_SetPitch (Pitch-0.50)
+		DUAL DC 1 A_SetPitch (Pitch+0.50) 
+		DUAL BA 5 
+		DUAL A 10  A_ReFire
+		DUAL A 5
+		goto ready
+	Hold:
+		DUAL A 0  A_Jump(256, "Hold1", "Hold2", "Hold3", "Hold4", "Hold5")
+		goto Held0
+	Hold1:
+		DUAL A 0  A_FireCustomMissile ("D_Laser",0,1,4,0,0,0)
+		DUAL A 0  A_FireCustomMissile ("D_Laser",0,1,-4,0,0,0)
+		goto Held0
+	Hold2:
+		DUAL A 0  A_FireCustomMissile ("D_Laser",2,1,4,0,0,0)
+		DUAL A 0  A_FireCustomMissile ("D_Laser",2,1,-4,0,0,0)
+		goto Held0
+	Hold3:
+		DUAL A 0  A_FireCustomMissile ("D_Laser",-2,1,4,0,0,0)
+		DUAL A 0  A_FireCustomMissile ("D_Laser",-2,1,-4,0,0,0)
+		goto Held0
+	Hold4:
+		DUAL A 0  A_FireCustomMissile ("D_Laser",1,1,4,0,0,1)
+		DUAL A 0  A_FireCustomMissile ("D_Laser",1,1,-4,0,0,1)
+		goto Held0
+	Hold5:
+		DUAL A 0  A_FireCustomMissile ("D_Laser",-1,1,4,0,0,1)
+		DUAL A 0  A_FireCustomMissile ("D_Laser",-1,1,-4,0,0,1)
+		goto Held0
+	Held0:
+		DUAL A 1  A_GunFlash
+		DUAL A 0  A_Recoil(5)
+		DUAL A 0  A_PlaySound ("FIRELASERS", CHAN_WEAPON)
+		DUAL AB 2 
+		DUAL CD 1 A_SetPitch (Pitch-0.50)
+		DUAL DC 1 A_SetPitch (Pitch+0.50) 
+		DUAL BA 5
+		DUAL A 10  A_ReFire
+		DUAL A 5
+		goto ready
+	Flash:
+		DUAL EF 1 Bright A_Light1
+		goto lightdone
+	Spawn:
+		DUSP A -1
+		stop
+		
+	}
+}
+
+ACTOR D_Laser : FastProjectile
+{
+	Radius 13
+	Height 8
+	Speed 180
+	Damage (5*random(5,10))
+	Projectile
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 0.75
+	DeathSound "weapons/plasmax"
+	Obituary "$OB_MPPLASMARIFLE"
+	Decal "GatDecal"
+	States
+	{
+	Spawn:
+		LSER A 1 Bright
+		Loop
+	Death:
+		LAZR ABCDE 4 Bright
+		Stop
+	}
+}

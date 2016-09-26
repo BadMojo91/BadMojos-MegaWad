@@ -1,0 +1,12 @@
+// Dead Marine Blue 
+
+actor DeadBlueMarine 6666
+{
+	Game Doom
+	States
+	{
+	Spawn:
+		DEAD A -1
+		Stop
+	}
+}

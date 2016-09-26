@@ -1,0 +1,12 @@
+Actor MallsBalls 3606
+{
+  Radius 20
+  Height 90
+  +Solid 
+  States
+  {
+  Spawn:
+    BALS A -1
+    Stop
+  }
+}

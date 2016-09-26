@@ -1,0 +1,105 @@
+type = "Doom Builder Map Settings Configuration";
+gameconfig = "GZDoom_DoomUDMF.cfg";
+strictpatches = 0;
+
+maps
+{
+	
+	MAP02
+	{
+		scriptcompiler = "zdoom_acs.cfg";
+		defaultfloortexture = "FLOOR4_8";
+		overrideceilheight = false;
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 2;
+				location = "I:\\PROJECTS\\BadMojo-s-Megawad\\BadMojo-MegaWad.pk3";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+			}
+		}
+		defaulttoptexture = "METAL2";
+		overridemiddletexture = false;
+		viewpositionx = -769.048f;
+		viewpositiony = -1453.336f;
+		viewscale = 0.3807903f;
+		overridefloortexture = false;
+		customceilheight = 128;
+		customfloorheight = 0;
+		
+		grid
+		{
+			background = "";
+			backoffsetx = 0;
+			backoffsety = 0;
+			backscalex = 100;
+			backscaley = 100;
+			backsource = 0;
+			gridsize = 8;
+		}
+		defaultceiltexture = "FLAT19";
+		overridebrightness = false;
+		uselongtexturenames = false;
+		overridebottomtexture = false;
+		overridefloorheight = false;
+		overridetoptexture = false;
+		custombrightness = 196;
+		overrideceiltexture = false;
+		defaultwalltexture = "METAL2";
+		defaultbottomtexture = "METAL2";
+		
+		fieldtypes
+		{
+			
+			linedef
+			{
+				locknumber = 0;
+			}
+			
+			sidedef
+			{
+				offsetx_mid = 1;
+				offsety_mid = 1;
+				offsetx_top = 1;
+				offsetx_bottom = 1;
+				offsety_bottom = 1;
+				light = 0;
+				offsety_top = 1;
+				scaley_bottom = 1;
+				scalex_bottom = 1;
+				scaley_mid = 1;
+				scalex_top = 1;
+			}
+			
+			sector
+			{
+				lightcolor = 0;
+				ypanningfloor = 1;
+				rotationfloor = 1;
+				xpanningfloor = 1;
+				fadecolor = 0;
+				xpanningceiling = 1;
+				ypanningceiling = 1;
+				rotationceiling = 1;
+				xscaleceiling = 1;
+				yscaleceiling = 1;
+				xscalefloor = 1;
+				yscalefloor = 1;
+				lightceiling = 0;
+				lightfloor = 0;
+				damagetype = 2;
+				damageamount = 0;
+			}
+			
+			thing
+			{
+				renderstyle = 2;
+			}
+		}
+	}
+}
