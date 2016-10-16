@@ -25,9 +25,9 @@ maps
 		}
 		defaulttoptexture = "METAL2";
 		overridemiddletexture = false;
-		viewpositionx = -769.048f;
-		viewpositiony = -1453.336f;
-		viewscale = 0.3807903f;
+		viewpositionx = -3324.143f;
+		viewpositiony = -130.1519f;
+		viewscale = 1.900494f;
 		overridefloortexture = false;
 		customceilheight = 128;
 		customfloorheight = 0;
@@ -91,14 +91,26 @@ maps
 				xscalefloor = 1;
 				yscalefloor = 1;
 				lightceiling = 0;
-				lightfloor = 0;
 				damagetype = 2;
 				damageamount = 0;
+				lightfloor = 0;
+				damageinterval = 0;
 			}
 			
 			thing
 			{
 				renderstyle = 2;
+			}
+		}
+		
+		scriptlumps
+		{
+			
+			lump
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				activetab = true;
 			}
 		}
 	}

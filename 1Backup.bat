@@ -3,11 +3,11 @@ REM====================
 REM====================
 set path="C:\Program Files\WinRAR\";%path%
 
-move %FILENAME%.pk3 BadMojoMWBackups
-cd BadMojoMWBackups
+move %FILENAME%.pk3 ..\BadMojoMWBackups
+cd ..\BadMojoMWBackups
 ren %FILENAME%.pk3 %FILENAME%-%date:~4,2%%date:~7,2%%date:~10,4%%time:~1,1%%time:~3,2%.pk3
 
-cd ..\%FILENAME%
+cd ..\BadMojo-s-Megawad\BadMojo-MegaWad
 
 winrar a -r -u -x@"*.zip *.pk3" -x*.git* -x*.git*/ -afzip %FILENAME%.zip *.*
 

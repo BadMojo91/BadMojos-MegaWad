@@ -20,11 +20,11 @@ maps
 				notfortesting = 0;
 			}
 		}
-		defaultfloortexture = "FLOOR0_1";
-		defaultceiltexture = "CEIL1_1";
-		defaulttoptexture = "MIDGRATE";
-		defaultwalltexture = "MIDGRATE";
-		defaultbottomtexture = "MIDGRATE";
+		defaultfloortexture = "FLOOR4_8";
+		defaultceiltexture = "CEIL3_5";
+		defaulttoptexture = "STARGR2";
+		defaultwalltexture = "STARGR2";
+		defaultbottomtexture = "STARGR2";
 		custombrightness = 196;
 		customfloorheight = 0;
 		customceilheight = 128;
@@ -37,9 +37,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -290.7186f;
-		viewpositiony = 717.7712f;
-		viewscale = 1.428018f;
+		viewpositionx = -405.1346f;
+		viewpositiony = 772.7104f;
+		viewscale = 1.856417f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -50,7 +50,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 16;
+			gridsize = 8;
 		}
 		
 		plugins
@@ -71,33 +71,31 @@ maps
 			sidedef
 			{
 				offsetx_mid = 1;
-				offsetx_bottom = 1;
 				offsety_mid = 1;
+				offsetx_bottom = 1;
 				offsety_bottom = 1;
 				offsetx_top = 1;
 				offsety_top = 1;
-				scalex_mid = 1;
-				scaley_mid = 1;
+				scalex_top = 1;
 				light = 0;
-				scaley_bottom = 1;
-				scalex_bottom = 1;
 			}
 			
 			sector
 			{
-				lightcolor = 0;
 				lightceiling = 0;
-				xscalefloor = 1;
-				yscalefloor = 1;
 				xpanningceiling = 1;
 				ypanningceiling = 1;
+				damagetype = 2;
 				rotationceiling = 1;
-				xscaleceiling = 1;
-				yscaleceiling = 1;
+				rotationfloor = 1;
 				xpanningfloor = 1;
 				ypanningfloor = 1;
-				rotationfloor = 1;
+				xscalefloor = 1;
+				yscalefloor = 1;
 				fadecolor = 0;
+				lightcolor = 0;
+				xscaleceiling = 1;
+				yscaleceiling = 1;
 			}
 		}
 	}

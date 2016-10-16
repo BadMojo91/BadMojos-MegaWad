@@ -20,3 +20,5 @@ pulsefire 			PULSE
 
 //Doors
 techdooropen 		SPACEDR
+
+invisibility		INVISI

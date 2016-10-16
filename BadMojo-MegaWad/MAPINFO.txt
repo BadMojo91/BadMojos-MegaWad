@@ -10,12 +10,23 @@ map MAP01 "The Beginning Of The End"
 
 map MAP02 "Escape"
 {
-	levelnum = 1
+	levelnum = 2
 	next = "MAP03"
 	sky1 = "PSKY", 0
 	Music = "OXYGEN"
 	par = 30
 	NoJump
 }
+
+map MAP03 "The City"
+{
+	levelnum = 3
+	next = "MAP04"
+	sky1 = "PSKY", 0
+	Music = "GONEWG"
+	par = 30
+	NoJump
+}
+
 
 
